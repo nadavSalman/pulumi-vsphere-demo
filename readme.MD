@@ -51,7 +51,7 @@ $ pulumi new python
 A new virtual environment is created for us, lets view current dependecies.
 ```console 
 $ pwd
-...you_full_project_path.../pulumi-vsphere-demo/vSphere
+...you_full_project_path.../pulumi-vsphere-demo/vSphere-infra
 # Activate virtual environment 
 $ source venv/bin/activate
 # List dependecies :
