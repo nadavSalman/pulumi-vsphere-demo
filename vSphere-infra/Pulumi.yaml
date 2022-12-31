@@ -1,4 +1,4 @@
-name: vSphere
+name: vSphere-infra
 runtime:
   name: python
   options:

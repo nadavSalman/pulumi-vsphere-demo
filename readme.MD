@@ -44,6 +44,7 @@ Because outputs are asynchronous, their actual raw values are not immediately av
 ## Creating new Pulumi Python project :
 
 ```console
+$ bmkdir vSphere-infra && cd vSphere-infra 
 $ pulumi new python 
 ```
 
@@ -97,5 +98,48 @@ export VSPHERE_USER=XXXXXXXXXXXX
 export VSPHERE_PASSWORD=YYYYYYYYYYYY
 export VSPHERE_SERVER=ZZZZZZZZZZZZ
 ```
+
+
+To determen what libery sould i import in my code first i need to know the correct module name : Inside the intepeter of my virtual envinronment i type :
+```python
+$ python
+>>> help
+help> modules
+Please wait a moment while I gather a list of all available modules...
+_sha3               dis                 pstats              warnings
+_sha512             distutils           pty                 wave
+_signal             doctest             pulumi              weakref
+_sitebuiltins       email               pulumi_vsphere      webbrowser
+_socket             encodings           pwd                 wheel
+_sqlite3            ensurepip           py_compile          wsgiref
+_sre                enum                pyclbr              xdrlib
+```
+Aour module to import is probebly : "pulumi_vsphere".
+
+Im interasting of creating 'Vishere Virtual Machine', how do kniw tha this package containe the right class / constractur ? The doc stands : "vsphere.VirtualMachine ... Create VirtualMachine Resource" So i searching in the pulumi_vsphere gast to make sure iam inthe right place:
+
+
+```python
+$ python 
+>>> import pulumi_vsphere
+>>> [item for item in dir(pulumi_vsphere) if "VirtualMachine" in item]
+['AwaitableGetVirtualMachineResult', 'GetVirtualMachineResult', 'GetVirtualMachineVappArgs', 'VirtualMachine', 'VirtualMachineArgs', 'VirtualMachineCdromArgs', 'VirtualMachineCloneArgs', 'VirtualMachineCloneCustomizeArgs', 'VirtualMachineCloneCustomizeLinuxOptionsArgs', 'VirtualMachineCloneCustomizeNetworkInterfaceArgs', 'VirtualMachineCloneCustomizeWindowsOptionsArgs', 'VirtualMachineDiskArgs', 'VirtualMachineNetworkInterfaceArgs', 'VirtualMachineOvfDeployArgs', 'VirtualMachineSnapshot', 'VirtualMachineSnapshotArgs', 'VirtualMachineVappArgs']
+>>> [item for item in dir(pulumi_vsphere) if "VirtualMachine" ==  item]
+['VirtualMachine']
+```
+The object VirtualMachine exsist and we are got to go.
+
+
+
+## python __main__.py
+```python
+"""A Python Pulumi program"""
+
+import pulumi_vsphere as vsphere
+
+datacenter = vsphere.get_datacenter(name="RnD4")
+```
+
+
 
 
