@@ -6,6 +6,7 @@ from pulumi_vsphere import Folder
 datacenter = vsphere.get_datacenter(name="RnD4")
 
 # Create Folder 
+from pulumi_vsphere import Folder
 
 test_folder = Folder("pulumi_resources", 
            datacenter_id=datacenter.id,
