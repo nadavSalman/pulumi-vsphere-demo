@@ -140,6 +140,26 @@ import pulumi_vsphere as vsphere
 datacenter = vsphere.get_datacenter(name="RnD4")
 ```
 
+Creat a Folder resource :
+
+```python
+vSphere-infra [main] $ python
+Python 3.10.7 (main, Sep 14 2022, 22:38:23) [Clang 14.0.0 (clang-1400.0.29.102)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import pulumi_vsphere
+>>> [ item for item in dir(pulumi_vsphere) if "Folder" in item]
+['AwaitableGetFolderResult', 'Folder', 'FolderArgs', 'GetFolderResult']
+
+# __main__.py 
+# Create Folder 
+
+test_folder = Folder("pulumi_resources", 
+           datacenter_id=datacenter.id,
+           path= "/pulumi-resources",
+           type="vm") 
+
+```
+![ScreenShot](screenshots/vsphere-folder.png)
 
 
 
