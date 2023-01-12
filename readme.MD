@@ -44,14 +44,14 @@ Because outputs are asynchronous, their actual raw values are not immediately av
 ## Creating new Pulumi Python project :
 
 ```console
-$ bmkdir vSphere-infra && cd vSphere-infra 
+$ mkdir infrastructure && cd infrastructure 
 $ pulumi new python 
 ```
 
 A new virtual environment is created for us, lets view current dependecies.
 ```console 
 $ pwd
-...you_full_project_path.../pulumi-vsphere-demo/vSphere-infra
+...you_full_project_path.../pulumi-vsphere-demo/infrastructure
 # Activate virtual environment 
 $ source venv/bin/activate
 # List dependecies :
@@ -87,7 +87,11 @@ Let’s review some of the generated project files:
 
 Installation :
 We are interasted in the package : Python: pulumi-vsphere 
+Install pulumi-vsphere package
 
+```bash
+pip3 install pulumi-vsphere 
+```
 
 
 Configuring Credentials :
@@ -143,7 +147,7 @@ datacenter = vsphere.get_datacenter(name="RnD4")
 Creat a Folder resource :
 
 ```python
-vSphere-infra [main] $ python
+infrastructure [main] $ python
 Python 3.10.7 (main, Sep 14 2022, 22:38:23) [Clang 14.0.0 (clang-1400.0.29.102)] on darwin
 Type "help", "copyright", "credits" or "license" for more information.
 >>> import pulumi_vsphere
