@@ -30,9 +30,10 @@ def main():
 
     # The vsphere.getOvfVmTemplate data source can be used to submit an OVF to vSphere 
     # and extract its hardware settings in a form that can be then used as inputs for a vsphere.VirtualMachine resource.
-    template = vsphere.get_virtual_machine(name="test-ubuntu",
+    template = vsphere.get_virtual_machine(name="Ubuntu-22.04.1-Key-Based",
     datacenter_id=datacenter.id)
-    # pulumi.export('dir(template)',dir(template))
+    pulumi.export('dir(template)',dir(template))
+    pulumi.export('dir(template)',template.name)
 
     # The vsphere.getNetwork data source can be used to discover the ID of a network in vSphere. 
     # This can be any network that can be used as the backing for a network interface for vsphere.VirtualMachine or any other vSphere resource that requires a network. 
@@ -70,7 +71,7 @@ def main():
                             ipv4_gateway=os.getenv('IPV4_GATEWAY'),
                             linux_options=VirtualMachineCloneCustomizeLinuxOptionsArgs(
                                 domain="kubernetes.com",
-                                host_name="node-001"
+                                host_name="node-00" + str(ip_index + 1)
                             ),
                             network_interfaces=[VirtualMachineCloneCustomizeNetworkInterfaceArgs(
                                 ipv4_address=nodes_ipv4_address[ip_index],
