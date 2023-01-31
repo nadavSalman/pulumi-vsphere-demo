@@ -1,0 +1,302 @@
+I0112 17:15:03.086504   45859 update.go:193] *** Starting Update(preview=true) ***
+I0112 17:15:03.086762   45859 plugins.go:120] gatherPluginsFromProgram(): gathering plugins from language host
+I0112 17:15:03.087523   45859 plugins.go:1578] GetPluginPath(language, python, <nil>): found on $PATH /opt/homebrew/bin/pulumi-language-python
+I0112 17:15:03.087731   45859 plugin.go:183] Launching plugin 'python' from '/opt/homebrew/bin/pulumi-language-python' with args: -virtualenv=venv,-root=/Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure,127.0.0.1:50947
+I0112 17:15:03.161135   45859 eventsink.go:78] eventSink::Infoerr(<{%reset%}>I0112 17:15:03.160589   45871 main.go:123] language host identified executor from path: `/opt/homebrew/bin/pulumi-language-python-exec`
+<{%reset%}>)
+I0112 17:15:03.166892   45859 langruntime_plugin.go:228] langhost[python].GetPluginInfo() executing
+I0112 17:15:03.168747   45859 langruntime_plugin.go:136] langhost[python].GetRequiredPlugins(proj=infrastructure,pwd=/Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure,program=.) executing
+I0112 17:15:03.181129   45859 eventsink.go:78] eventSink::Infoerr(<{%reset%}>I0112 17:15:03.181075   45871 main.go:397] GetRequiredPlugins: Determining pulumi packages
+<{%reset%}>)
+I0112 17:15:03.181174   45859 eventsink.go:78] eventSink::Infoerr(<{%reset%}>I0112 17:15:03.181128   45871 main.go:633] Language host launching process: /Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/bin/python -m pip list -v --format json
+<{%reset%}>)
+I0112 17:15:03.662658   45859 eventsink.go:78] eventSink::Infoerr(<{%reset%}>I0112 17:15:03.662533   45871 main.go:643] Process output: [{"name": "Arpeggio", "version": "2.0.0", "location": "/Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/lib/python3.10/site-packages", "installer": "pip"}, {"name": "attrs", "version": "22.2.0", "location": "/Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/lib/python3.10/site-packages", "installer": "pip"}, {"name": "dill", "version": "0.3.6", "location": "/Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/lib/python3.10/site-packages", "installer": "pip"}, {"name": "grpcio", "version": "1.50.0", "location": "/Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/lib/python3.10/site-packages", "installer": "pip"}, {"name": "parver", "version": "0.4", "location": "/Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/lib/python3.10/site-packages", "installer": "pip"}, {"name": "pip", "version": "22.3.1", "location": "/Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/lib/python3.10/site-packages", "installer": "pip"}, {"name": "protobuf", "version": "4.21.12", "location": "/Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/lib/python3.10/site-packages", "installer": "pip"}, {"name": "pulumi", "version": "3.51.0", "location": "/Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/lib/python3.10/site-packages", "installer": "pip"}, {"name": "pulumi-vsphere", "version": "4.3.0", "location": "/Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/lib/python3.10/site-packages", "installer": "pip"}, {"name": "PyYAML", "version": "6.0", "location": "/Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/lib/python3.10/site-packages", "installer": "pip"}, {"name": "semver", "version": "2.13.0", "location": "/Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/lib/python3.10/site-packages", "installer": "pip"}, {"name": "setuptools", "version": "65.6.3", "location": "/Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/lib/python3.10/site-packages", "installer": "pip"}, {"name": "six", "version": "1.16.0", "location": "/Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/lib/python3.10/site-packages", "installer": "pip"}, {"name": "wheel", "version": "0.38.4", "location": "/Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/lib/python3.10/site-packages", "installer": "pip"}]
+<{%reset%}>)
+I0112 17:15:03.663679   45859 eventsink.go:78] eventSink::Infoerr(<{%reset%}>I0112 17:15:03.663619   45871 main.go:384] readPulumiPluginJSON: pulumi-plugin.json file path: /Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/lib/python3.10/site-packages/Arpeggio/pulumi-plugin.json
+<{%reset%}>)
+I0112 17:15:03.663718   45859 eventsink.go:78] eventSink::Infoerr(<{%reset%}>I0112 17:15:03.663683   45871 main.go:384] readPulumiPluginJSON: pulumi-plugin.json file path: /Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/lib/python3.10/site-packages/attrs/pulumi-plugin.json
+<{%reset%}>)
+I0112 17:15:03.663733   45859 eventsink.go:78] eventSink::Infoerr(<{%reset%}>I0112 17:15:03.663692   45871 main.go:384] readPulumiPluginJSON: pulumi-plugin.json file path: /Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/lib/python3.10/site-packages/dill/pulumi-plugin.json
+<{%reset%}>)
+I0112 17:15:03.663739   45859 eventsink.go:78] eventSink::Infoerr(<{%reset%}>I0112 17:15:03.663696   45871 main.go:384] readPulumiPluginJSON: pulumi-plugin.json file path: /Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/lib/python3.10/site-packages/grpcio/pulumi-plugin.json
+<{%reset%}>)
+I0112 17:15:03.663773   45859 eventsink.go:78] eventSink::Infoerr(<{%reset%}>I0112 17:15:03.663699   45871 main.go:384] readPulumiPluginJSON: pulumi-plugin.json file path: /Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/lib/python3.10/site-packages/parver/pulumi-plugin.json
+<{%reset%}>)
+I0112 17:15:03.663781   45859 eventsink.go:78] eventSink::Infoerr(<{%reset%}>I0112 17:15:03.663702   45871 main.go:384] readPulumiPluginJSON: pulumi-plugin.json file path: /Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/lib/python3.10/site-packages/pip/pulumi-plugin.json
+<{%reset%}>)
+I0112 17:15:03.663788   45859 eventsink.go:78] eventSink::Infoerr(<{%reset%}>I0112 17:15:03.663707   45871 main.go:384] readPulumiPluginJSON: pulumi-plugin.json file path: /Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/lib/python3.10/site-packages/protobuf/pulumi-plugin.json
+<{%reset%}>)
+I0112 17:15:03.663800   45859 eventsink.go:78] eventSink::Infoerr(<{%reset%}>I0112 17:15:03.663717   45871 main.go:384] readPulumiPluginJSON: pulumi-plugin.json file path: /Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/lib/python3.10/site-packages/pulumi/pulumi-plugin.json
+<{%reset%}>)
+I0112 17:15:03.663805   45859 eventsink.go:78] eventSink::Infoerr(<{%reset%}>I0112 17:15:03.663724   45871 main.go:384] readPulumiPluginJSON: pulumi-plugin.json file path: /Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/lib/python3.10/site-packages/pulumi_vsphere/pulumi-plugin.json
+<{%reset%}>)
+I0112 17:15:03.664084   45859 eventsink.go:78] eventSink::Infoerr(<{%reset%}>I0112 17:15:03.664065   45871 main.go:384] readPulumiPluginJSON: pulumi-plugin.json file path: /Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/lib/python3.10/site-packages/PyYAML/pulumi-plugin.json
+<{%reset%}>)
+I0112 17:15:03.664112   45859 eventsink.go:78] eventSink::Infoerr(<{%reset%}>I0112 17:15:03.664083   45871 main.go:384] readPulumiPluginJSON: pulumi-plugin.json file path: /Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/lib/python3.10/site-packages/semver/pulumi-plugin.json
+<{%reset%}>)
+I0112 17:15:03.664120   45859 eventsink.go:78] eventSink::Infoerr(<{%reset%}>I0112 17:15:03.664087   45871 main.go:384] readPulumiPluginJSON: pulumi-plugin.json file path: /Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/lib/python3.10/site-packages/setuptools/pulumi-plugin.json
+<{%reset%}>)
+I0112 17:15:03.664127   45859 eventsink.go:78] eventSink::Infoerr(<{%reset%}>I0112 17:15:03.664092   45871 main.go:384] readPulumiPluginJSON: pulumi-plugin.json file path: /Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/lib/python3.10/site-packages/six/pulumi-plugin.json
+<{%reset%}>)
+I0112 17:15:03.664135   45859 eventsink.go:78] eventSink::Infoerr(<{%reset%}>I0112 17:15:03.664095   45871 main.go:384] readPulumiPluginJSON: pulumi-plugin.json file path: /Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/lib/python3.10/site-packages/wheel/pulumi-plugin.json
+<{%reset%}>)
+I0112 17:15:03.664163   45859 eventsink.go:78] eventSink::Infoerr(<{%reset%}>I0112 17:15:03.664099   45871 main.go:430] GetRequiredPlugins: Pulumi packages: []main.pythonPackage{main.pythonPackage{Name:"pulumi-vsphere", Version:"4.3.0", Location:"/Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/lib/python3.10/site-packages", plugin:(*plugin.PulumiPluginJSON)(0x140003ee100)}}
+<{%reset%}>)
+I0112 17:15:03.664309   45859 eventsink.go:78] eventSink::Infoerr(<{%reset%}>I0112 17:15:03.664269   45871 main.go:490] GetRequiredPlugins: Determining plugin dependency: &pulumirpc.PluginDependency{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(nil)}, sizeCache:0, unknownFields:[]uint8(nil), Name:"vsphere", Kind:"resource", Version:"v4.3.0", Server:""}
+<{%reset%}>)
+I0112 17:15:03.665187   45859 langruntime_plugin.go:178] langhost[python].GetRequiredPlugins(proj=infrastructure,pwd=/Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure,program=.) success: #versions=1
+I0112 17:15:03.665200   45859 plugins.go:132] gatherPluginsFromProgram(): plugin python <nil> () is required by language host
+I0112 17:15:03.665221   45859 plugins.go:132] gatherPluginsFromProgram(): plugin vsphere 4.3.0 () is required by language host
+I0112 17:15:03.665457   45859 plugins.go:144] gatherPluginsFromSnapshot(): gathering plugins from snapshot
+I0112 17:15:03.665463   45859 plugins.go:153] gatherPluginsFromSnapshot(): skipping "urn:pulumi:dev::infrastructure::pulumi:pulumi:Stack::infrastructure-dev", not a provider
+I0112 17:15:03.665474   45859 plugins.go:181] ensurePluginsAreInstalled(): beginning
+I0112 17:15:03.666189   45859 plugins.go:1633] GetPluginPath(resource, vsphere, 4.3.0): enabling new plugin behavior
+I0112 17:15:03.666352   45859 plugins.go:1743] SelectCompatiblePlugin(..., vsphere): beginning
+I0112 17:15:03.666359   45859 plugins.go:1772] SelectCompatiblePlugin(..., vsphere): best plugin vsphere-4.3.0: semver match
+I0112 17:15:03.666362   45859 plugins.go:1785] SelectCompatiblePlugin(..., vsphere): selecting plugin 'vsphere-4.3.0': best match 
+I0112 17:15:03.666375   45859 plugins.go:1678] GetPluginPath(resource, vsphere, 4.3.0): found in cache at /Users/nsalman/.pulumi/plugins/resource-vsphere-v4.3.0/pulumi-resource-vsphere
+I0112 17:15:03.666379   45859 plugins.go:186] ensurePluginsAreInstalled(): plugin vsphere 4.3.0 already installed
+I0112 17:15:03.666399   45859 plugins.go:1578] GetPluginPath(language, python, <nil>): found on $PATH /opt/homebrew/bin/pulumi-language-python
+I0112 17:15:03.666405   45859 plugins.go:186] ensurePluginsAreInstalled(): plugin python <nil> already installed
+I0112 17:15:03.666410   45859 plugins.go:201] ensurePluginsAreInstalled(): completed
+I0112 17:15:03.666415   45859 plugins.go:310] computeDefaultProviderPlugins(): considering python
+I0112 17:15:03.666421   45859 plugins.go:313] computeDefaultProviderPlugins(): skipping python, not a resource provider
+I0112 17:15:03.666425   45859 plugins.go:310] computeDefaultProviderPlugins(): considering vsphere-4.3.0
+I0112 17:15:03.666430   45859 plugins.go:341] computeDefaultProviderPlugins(): plugin vsphere-4.3.0 selected for package vsphere (first seen)
+I0112 17:15:03.666434   45859 plugins.go:347] computeDefaultProviderPlugins(): summary of default plugins:
+I0112 17:15:03.666438   45859 plugins.go:349]   vsphere         = 4.3.0
+I0112 17:15:03.666458   45859 plugins.go:1578] GetPluginPath(language, python, <nil>): found on $PATH /opt/homebrew/bin/pulumi-language-python
+I0112 17:15:03.666475   45859 plugin.go:183] Launching plugin 'python' from '/opt/homebrew/bin/pulumi-language-python' with args: -root=/Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure,127.0.0.1:50947
+I0112 17:15:03.676844   45859 eventsink.go:78] eventSink::Infoerr(<{%reset%}>I0112 17:15:03.676688   45879 main.go:123] language host identified executor from path: `/opt/homebrew/bin/pulumi-language-python-exec`
+<{%reset%}>)
+I0112 17:15:03.677991   45859 langruntime_plugin.go:228] langhost[python].GetPluginInfo() executing
+I0112 17:15:03.678861   45859 registry.go:127] provider(urn:pulumi:dev::infrastructure::pulumi:pulumi:Stack::infrastructure-dev): 
+I0112 17:15:03.679307   45859 langruntime_plugin.go:188] langhost[python].Run(pwd=/Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure,program=.,#args=0,proj=infrastructure,stack=dev,#config=0,dryrun=true) executing
+I0112 17:15:03.679620   45859 step_executor.go:389] StepExecutor worker(-2): worker coming online
+I0112 17:15:03.679632   45859 step_executor.go:389] StepExecutor worker(-2): worker waiting for incoming chains
+I0112 17:15:03.679639   45859 deployment_executor.go:227] deploymentExecutor.Execute(...): waiting for incoming events
+I0112 17:15:03.679885   45859 eventsink.go:78] eventSink::Infoerr(<{%reset%}>I0112 17:15:03.679859   45871 main.go:667] Language host launching process:  /opt/homebrew/bin/pulumi-language-python-exec /opt/homebrew/bin/pulumi-language-python-exec --monitor 127.0.0.1:50955 --engine 127.0.0.1:50947 --project infrastructure --stack dev --pwd /Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure --dry_run true --parallel 2147483647 .
+<{%reset%}>)
+I0112 17:15:03.877057   45859 eventsink.go:59] registering resource: ty=pulumi:pulumi:Stack, name=infrastructure-dev, custom=False, remote=False
+I0112 17:15:03.877075   45859 eventsink.go:62] eventSink::Debug(<{%reset%}>registering resource: ty=pulumi:pulumi:Stack, name=infrastructure-dev, custom=False, remote=False<{%reset%}>)
+I0112 17:15:04.165406   45859 eventsink.go:59] Waiting for outstanding RPCs to complete
+I0112 17:15:04.165429   45859 eventsink.go:62] eventSink::Debug(<{%reset%}>Waiting for outstanding RPCs to complete<{%reset%}>)
+I0112 17:15:04.165716   45859 eventsink.go:59] RPCs successfully completed
+I0112 17:15:04.165745   45859 eventsink.go:62] eventSink::Debug(<{%reset%}>RPCs successfully completed<{%reset%}>)
+I0112 17:15:04.165999   45859 eventsink.go:59] Waiting for 3 outstanding tasks to complete
+I0112 17:15:04.166010   45859 eventsink.go:62] eventSink::Debug(<{%reset%}>Waiting for 3 outstanding tasks to complete<{%reset%}>)
+I0112 17:15:04.166365   45859 eventsink.go:59] beginning rpc register resource
+I0112 17:15:04.166381   45859 eventsink.go:62] eventSink::Debug(<{%reset%}>beginning rpc register resource<{%reset%}>)
+I0112 17:15:04.166579   45859 eventsink.go:59] beginning rpc register resource outputs
+I0112 17:15:04.166596   45859 eventsink.go:62] eventSink::Debug(<{%reset%}>beginning rpc register resource outputs<{%reset%}>)
+I0112 17:15:04.166846   45859 eventsink.go:59] resource registration prepared: ty=pulumi:pulumi:Stack, name=infrastructure-dev
+I0112 17:15:04.166858   45859 eventsink.go:62] eventSink::Debug(<{%reset%}>resource registration prepared: ty=pulumi:pulumi:Stack, name=infrastructure-dev<{%reset%}>)
+I0112 17:15:04.170301   45859 source_eval.go:1180] ResourceMonitor.RegisterResource received: t=pulumi:pulumi:Stack, name=infrastructure-dev, custom=false, #props=0, parent=, protect=false, provider=, deps=[], deleteBeforeReplace=<nil>, ignoreChanges=[], aliases=[], customTimeouts={0 0 0}, providers=map[], replaceOnChanges=[], retainOnDelete=false, deletedWith=
+I0112 17:15:04.170499   45859 source_eval.go:170] EvalSourceIterator produced a registration: t=pulumi:pulumi:Stack,name=infrastructure-dev,#props=0
+I0112 17:15:04.170514   45859 deployment_executor.go:231] deploymentExecutor.Execute(...): incoming event (nil? false, <nil>)
+I0112 17:15:04.170520   45859 deployment_executor.go:418] deploymentExecutor.handleSingleEvent(...): received RegisterResourceEvent
+I0112 17:15:04.171616   45859 step_generator.go:809] Planner decided not to update 'urn:pulumi:dev::infrastructure::pulumi:pulumi:Stack::infrastructure-dev' after diff (same) (inputs=map[])
+I0112 17:15:04.177981   45859 step_generator.go:269] Checking step same for urn:pulumi:dev::infrastructure::pulumi:pulumi:Stack::infrastructure-dev
+I0112 17:15:04.178007   45859 step_executor.go:389] StepExecutor worker(-2): worker received chain for execution
+I0112 17:15:04.178018   45859 step_executor.go:389] StepExecutor worker(-2): worker waiting for incoming chains
+I0112 17:15:04.178030   45859 step_executor.go:389] StepExecutor worker(0): launching oneshot worker
+I0112 17:15:04.178073   45859 step_executor.go:389] StepExecutor worker(0): applying step same on urn:pulumi:dev::infrastructure::pulumi:pulumi:Stack::infrastructure-dev (preview true)
+I0112 17:15:04.178086   45859 step_executor.go:389] StepExecutor worker(0): step same on urn:pulumi:dev::infrastructure::pulumi:pulumi:Stack::infrastructure-dev retired
+I0112 17:15:04.178101   45859 source_eval.go:1323] ResourceMonitor.RegisterResource operation finished: t=pulumi:pulumi:Stack, urn=urn:pulumi:dev::infrastructure::pulumi:pulumi:Stack::infrastructure-dev, #outs=0
+I0112 17:15:04.178628   45859 eventsink.go:59] resource registration successful: ty=pulumi:pulumi:Stack, urn=urn:pulumi:dev::infrastructure::pulumi:pulumi:Stack::infrastructure-dev
+I0112 17:15:04.178644   45859 eventsink.go:62] eventSink::Debug(<{%reset%}>resource registration successful: ty=pulumi:pulumi:Stack, urn=urn:pulumi:dev::infrastructure::pulumi:pulumi:Stack::infrastructure-dev<{%reset%}>)
+I0112 17:15:04.179075   45859 eventsink.go:59] register resource outputs prepared: urn=urn:pulumi:dev::infrastructure::pulumi:pulumi:Stack::infrastructure-dev, props=
+I0112 17:15:04.179088   45859 eventsink.go:62] eventSink::Debug(<{%reset%}>register resource outputs prepared: urn=urn:pulumi:dev::infrastructure::pulumi:pulumi:Stack::infrastructure-dev, props=<{%reset%}>)
+I0112 17:15:04.179323   45859 source_eval.go:1379] ResourceMonitor.RegisterResourceOutputs received: urn=urn:pulumi:dev::infrastructure::pulumi:pulumi:Stack::infrastructure-dev, #outs=0
+I0112 17:15:04.179337   45859 source_eval.go:175] EvalSourceIterator produced a completion: urn=urn:pulumi:dev::infrastructure::pulumi:pulumi:Stack::infrastructure-dev,#outs=0
+I0112 17:15:04.179348   45859 deployment_executor.go:231] deploymentExecutor.Execute(...): incoming event (nil? false, <nil>)
+I0112 17:15:04.179353   45859 deployment_executor.go:424] deploymentExecutor.handleSingleEvent(...): received register resource outputs
+I0112 17:15:04.179359   45859 step_executor.go:389] StepExecutor worker(-1): registered resource outputs urn:pulumi:dev::infrastructure::pulumi:pulumi:Stack::infrastructure-dev: old=#0, new=#0
+I0112 17:15:04.179367   45859 source_eval.go:1403] ResourceMonitor.RegisterResourceOutputs operation finished: urn=urn:pulumi:dev::infrastructure::pulumi:pulumi:Stack::infrastructure-dev, #outs=0
+I0112 17:15:04.179609   45859 eventsink.go:59] resource registration successful: urn=urn:pulumi:dev::infrastructure::pulumi:pulumi:Stack::infrastructure-dev, props=
+I0112 17:15:04.179616   45859 eventsink.go:62] eventSink::Debug(<{%reset%}>resource registration successful: urn=urn:pulumi:dev::infrastructure::pulumi:pulumi:Stack::infrastructure-dev, props=<{%reset%}>)
+I0112 17:15:04.179842   45859 eventsink.go:59] All outstanding tasks completed.
+I0112 17:15:04.179851   45859 eventsink.go:62] eventSink::Debug(<{%reset%}>All outstanding tasks completed.<{%reset%}>)
+I0112 17:15:04.180015   45859 eventsink.go:59] waiting for quiescence; 2 RPCs outstanding
+I0112 17:15:04.180022   45859 eventsink.go:62] eventSink::Debug(<{%reset%}>waiting for quiescence; 2 RPCs outstanding<{%reset%}>)
+I0112 17:15:04.180194   45859 eventsink.go:59] waiting for quiescence; 1 RPCs outstanding
+I0112 17:15:04.180202   45859 eventsink.go:62] eventSink::Debug(<{%reset%}>waiting for quiescence; 1 RPCs outstanding<{%reset%}>)
+I0112 17:15:04.180383   45859 eventsink.go:59] RPCs successfully completed
+I0112 17:15:04.180390   45859 eventsink.go:62] eventSink::Debug(<{%reset%}>RPCs successfully completed<{%reset%}>)
+I0112 17:15:04.180581   45859 eventsink.go:59] No outstanding tasks to complete
+I0112 17:15:04.180606   45859 eventsink.go:62] eventSink::Debug(<{%reset%}>No outstanding tasks to complete<{%reset%}>)
+I0112 17:15:04.180845   45859 eventsink.go:59] run_pulumi_func completed
+I0112 17:15:04.180854   45859 eventsink.go:62] eventSink::Debug(<{%reset%}>run_pulumi_func completed<{%reset%}>)
+I0112 17:15:04.209186   45859 langruntime_plugin.go:221] langhost[python].RunPlan(pwd=/Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure,program=.,...,dryrun=true) success: progerr=
+I0112 17:15:04.214956   45859 deployment_executor.go:231] deploymentExecutor.Execute(...): incoming event (nil? true, <nil>)
+I0112 17:15:04.214983   45859 deployment_executor.go:361] performDeletes(...): beginning
+I0112 17:15:04.214990   45859 step_generator.go:1318] Planner trusts dependency graph, scheduling deletions in parallel
+I0112 17:15:04.214996   45859 step_executor.go:389] StepExecutor worker(-1): StepExecutor.waitForCompletion(): waiting for worker threads to exit
+I0112 17:15:04.215001   45859 step_executor.go:389] StepExecutor worker(-2): worker received nil chain, exiting
+I0112 17:15:04.215005   45859 step_executor.go:389] StepExecutor worker(-1): StepExecutor.waitForCompletion(): worker threads all exited
+I0112 17:15:04.215011   45859 deployment_executor.go:275] deploymentExecutor.Execute(...): step executor has completed
+I0112 17:15:04.215031   45859 deployment_executor.go:138] deploymentExecutor.Execute(...): exiting provider canceller
+I0112 17:15:04.215312   45859 ignore.go:44] Explicitly ignoring and discarding error: rpc error: code = Canceled desc = grpc: the client connection is closing
+I0112 17:15:04.215337   45859 host.go:530] Error closing 'python' language plugin during shutdown; ignoring: 1 error occurred:
+	* operation not permitted
+
+I0112 17:15:04.215910   45859 update.go:196] *** Update(preview=true) complete ***
+I0112 17:15:08.796029   45859 update.go:193] *** Starting Update(preview=false) ***
+I0112 17:15:08.796200   45859 plugins.go:120] gatherPluginsFromProgram(): gathering plugins from language host
+I0112 17:15:08.796261   45859 plugins.go:1578] GetPluginPath(language, python, <nil>): found on $PATH /opt/homebrew/bin/pulumi-language-python
+I0112 17:15:08.796285   45859 plugin.go:183] Launching plugin 'python' from '/opt/homebrew/bin/pulumi-language-python' with args: -virtualenv=venv,-root=/Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure,127.0.0.1:50959
+I0112 17:15:08.810312   45859 eventsink.go:78] eventSink::Infoerr(<{%reset%}>I0112 17:15:08.810026   45898 main.go:123] language host identified executor from path: `/opt/homebrew/bin/pulumi-language-python-exec`
+<{%reset%}>)
+I0112 17:15:08.811368   45859 langruntime_plugin.go:228] langhost[python].GetPluginInfo() executing
+I0112 17:15:08.811732   45859 langruntime_plugin.go:136] langhost[python].GetRequiredPlugins(proj=infrastructure,pwd=/Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure,program=.) executing
+I0112 17:15:08.819623   45859 eventsink.go:78] eventSink::Infoerr(<{%reset%}>I0112 17:15:08.819567   45898 main.go:397] GetRequiredPlugins: Determining pulumi packages
+<{%reset%}>)
+I0112 17:15:08.819661   45859 eventsink.go:78] eventSink::Infoerr(<{%reset%}>I0112 17:15:08.819607   45898 main.go:633] Language host launching process: /Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/bin/python -m pip list -v --format json
+<{%reset%}>)
+I0112 17:15:09.169041   45859 eventsink.go:78] eventSink::Infoerr(<{%reset%}>I0112 17:15:09.168966   45898 main.go:643] Process output: [{"name": "Arpeggio", "version": "2.0.0", "location": "/Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/lib/python3.10/site-packages", "installer": "pip"}, {"name": "attrs", "version": "22.2.0", "location": "/Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/lib/python3.10/site-packages", "installer": "pip"}, {"name": "dill", "version": "0.3.6", "location": "/Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/lib/python3.10/site-packages", "installer": "pip"}, {"name": "grpcio", "version": "1.50.0", "location": "/Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/lib/python3.10/site-packages", "installer": "pip"}, {"name": "parver", "version": "0.4", "location": "/Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/lib/python3.10/site-packages", "installer": "pip"}, {"name": "pip", "version": "22.3.1", "location": "/Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/lib/python3.10/site-packages", "installer": "pip"}, {"name": "protobuf", "version": "4.21.12", "location": "/Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/lib/python3.10/site-packages", "installer": "pip"}, {"name": "pulumi", "version": "3.51.0", "location": "/Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/lib/python3.10/site-packages", "installer": "pip"}, {"name": "pulumi-vsphere", "version": "4.3.0", "location": "/Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/lib/python3.10/site-packages", "installer": "pip"}, {"name": "PyYAML", "version": "6.0", "location": "/Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/lib/python3.10/site-packages", "installer": "pip"}, {"name": "semver", "version": "2.13.0", "location": "/Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/lib/python3.10/site-packages", "installer": "pip"}, {"name": "setuptools", "version": "65.6.3", "location": "/Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/lib/python3.10/site-packages", "installer": "pip"}, {"name": "six", "version": "1.16.0", "location": "/Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/lib/python3.10/site-packages", "installer": "pip"}, {"name": "wheel", "version": "0.38.4", "location": "/Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/lib/python3.10/site-packages", "installer": "pip"}]
+<{%reset%}>)
+I0112 17:15:09.169208   45859 eventsink.go:78] eventSink::Infoerr(<{%reset%}>I0112 17:15:09.169174   45898 main.go:384] readPulumiPluginJSON: pulumi-plugin.json file path: /Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/lib/python3.10/site-packages/Arpeggio/pulumi-plugin.json
+<{%reset%}>)
+I0112 17:15:09.169279   45859 eventsink.go:78] eventSink::Infoerr(<{%reset%}>I0112 17:15:09.169231   45898 main.go:384] readPulumiPluginJSON: pulumi-plugin.json file path: /Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/lib/python3.10/site-packages/attrs/pulumi-plugin.json
+<{%reset%}>)
+I0112 17:15:09.169307   45859 eventsink.go:78] eventSink::Infoerr(<{%reset%}>I0112 17:15:09.169238   45898 main.go:384] readPulumiPluginJSON: pulumi-plugin.json file path: /Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/lib/python3.10/site-packages/dill/pulumi-plugin.json
+<{%reset%}>)
+I0112 17:15:09.169328   45859 eventsink.go:78] eventSink::Infoerr(<{%reset%}>I0112 17:15:09.169245   45898 main.go:384] readPulumiPluginJSON: pulumi-plugin.json file path: /Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/lib/python3.10/site-packages/grpcio/pulumi-plugin.json
+<{%reset%}>)
+I0112 17:15:09.169336   45859 eventsink.go:78] eventSink::Infoerr(<{%reset%}>I0112 17:15:09.169248   45898 main.go:384] readPulumiPluginJSON: pulumi-plugin.json file path: /Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/lib/python3.10/site-packages/parver/pulumi-plugin.json
+<{%reset%}>)
+I0112 17:15:09.169342   45859 eventsink.go:78] eventSink::Infoerr(<{%reset%}>I0112 17:15:09.169252   45898 main.go:384] readPulumiPluginJSON: pulumi-plugin.json file path: /Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/lib/python3.10/site-packages/pip/pulumi-plugin.json
+<{%reset%}>)
+I0112 17:15:09.169347   45859 eventsink.go:78] eventSink::Infoerr(<{%reset%}>I0112 17:15:09.169256   45898 main.go:384] readPulumiPluginJSON: pulumi-plugin.json file path: /Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/lib/python3.10/site-packages/protobuf/pulumi-plugin.json
+<{%reset%}>)
+I0112 17:15:09.169361   45859 eventsink.go:78] eventSink::Infoerr(<{%reset%}>I0112 17:15:09.169260   45898 main.go:384] readPulumiPluginJSON: pulumi-plugin.json file path: /Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/lib/python3.10/site-packages/pulumi/pulumi-plugin.json
+<{%reset%}>)
+I0112 17:15:09.169377   45859 eventsink.go:78] eventSink::Infoerr(<{%reset%}>I0112 17:15:09.169272   45898 main.go:384] readPulumiPluginJSON: pulumi-plugin.json file path: /Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/lib/python3.10/site-packages/pulumi_vsphere/pulumi-plugin.json
+<{%reset%}>)
+I0112 17:15:09.169392   45859 eventsink.go:78] eventSink::Infoerr(<{%reset%}>I0112 17:15:09.169353   45898 main.go:384] readPulumiPluginJSON: pulumi-plugin.json file path: /Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/lib/python3.10/site-packages/PyYAML/pulumi-plugin.json
+<{%reset%}>)
+I0112 17:15:09.169398   45859 eventsink.go:78] eventSink::Infoerr(<{%reset%}>I0112 17:15:09.169358   45898 main.go:384] readPulumiPluginJSON: pulumi-plugin.json file path: /Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/lib/python3.10/site-packages/semver/pulumi-plugin.json
+<{%reset%}>)
+I0112 17:15:09.169410   45859 eventsink.go:78] eventSink::Infoerr(<{%reset%}>I0112 17:15:09.169361   45898 main.go:384] readPulumiPluginJSON: pulumi-plugin.json file path: /Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/lib/python3.10/site-packages/setuptools/pulumi-plugin.json
+<{%reset%}>)
+I0112 17:15:09.169426   45859 eventsink.go:78] eventSink::Infoerr(<{%reset%}>I0112 17:15:09.169365   45898 main.go:384] readPulumiPluginJSON: pulumi-plugin.json file path: /Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/lib/python3.10/site-packages/six/pulumi-plugin.json
+<{%reset%}>)
+I0112 17:15:09.169443   45859 eventsink.go:78] eventSink::Infoerr(<{%reset%}>I0112 17:15:09.169374   45898 main.go:384] readPulumiPluginJSON: pulumi-plugin.json file path: /Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/lib/python3.10/site-packages/wheel/pulumi-plugin.json
+<{%reset%}>)
+I0112 17:15:09.169455   45859 eventsink.go:78] eventSink::Infoerr(<{%reset%}>I0112 17:15:09.169378   45898 main.go:430] GetRequiredPlugins: Pulumi packages: []main.pythonPackage{main.pythonPackage{Name:"pulumi-vsphere", Version:"4.3.0", Location:"/Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure/venv/lib/python3.10/site-packages", plugin:(*plugin.PulumiPluginJSON)(0x1400059c580)}}
+<{%reset%}>)
+I0112 17:15:09.169466   45859 eventsink.go:78] eventSink::Infoerr(<{%reset%}>I0112 17:15:09.169390   45898 main.go:490] GetRequiredPlugins: Determining plugin dependency: &pulumirpc.PluginDependency{state:impl.MessageState{NoUnkeyedLiterals:pragma.NoUnkeyedLiterals{}, DoNotCompare:pragma.DoNotCompare{}, DoNotCopy:pragma.DoNotCopy{}, atomicMessageInfo:(*impl.MessageInfo)(nil)}, sizeCache:0, unknownFields:[]uint8(nil), Name:"vsphere", Kind:"resource", Version:"v4.3.0", Server:""}
+<{%reset%}>)
+I0112 17:15:09.169752   45859 langruntime_plugin.go:178] langhost[python].GetRequiredPlugins(proj=infrastructure,pwd=/Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure,program=.) success: #versions=1
+I0112 17:15:09.169781   45859 plugins.go:132] gatherPluginsFromProgram(): plugin python <nil> () is required by language host
+I0112 17:15:09.169795   45859 plugins.go:132] gatherPluginsFromProgram(): plugin vsphere 4.3.0 () is required by language host
+I0112 17:15:09.169801   45859 plugins.go:144] gatherPluginsFromSnapshot(): gathering plugins from snapshot
+I0112 17:15:09.169808   45859 plugins.go:153] gatherPluginsFromSnapshot(): skipping "urn:pulumi:dev::infrastructure::pulumi:pulumi:Stack::infrastructure-dev", not a provider
+I0112 17:15:09.169819   45859 plugins.go:181] ensurePluginsAreInstalled(): beginning
+I0112 17:15:09.169875   45859 plugins.go:1578] GetPluginPath(language, python, <nil>): found on $PATH /opt/homebrew/bin/pulumi-language-python
+I0112 17:15:09.169883   45859 plugins.go:186] ensurePluginsAreInstalled(): plugin python <nil> already installed
+I0112 17:15:09.170156   45859 plugins.go:1633] GetPluginPath(resource, vsphere, 4.3.0): enabling new plugin behavior
+I0112 17:15:09.170166   45859 plugins.go:1743] SelectCompatiblePlugin(..., vsphere): beginning
+I0112 17:15:09.170172   45859 plugins.go:1772] SelectCompatiblePlugin(..., vsphere): best plugin vsphere-4.3.0: semver match
+I0112 17:15:09.170176   45859 plugins.go:1785] SelectCompatiblePlugin(..., vsphere): selecting plugin 'vsphere-4.3.0': best match 
+I0112 17:15:09.170186   45859 plugins.go:1678] GetPluginPath(resource, vsphere, 4.3.0): found in cache at /Users/nsalman/.pulumi/plugins/resource-vsphere-v4.3.0/pulumi-resource-vsphere
+I0112 17:15:09.170190   45859 plugins.go:186] ensurePluginsAreInstalled(): plugin vsphere 4.3.0 already installed
+I0112 17:15:09.170193   45859 plugins.go:201] ensurePluginsAreInstalled(): completed
+I0112 17:15:09.170199   45859 plugins.go:310] computeDefaultProviderPlugins(): considering python
+I0112 17:15:09.170205   45859 plugins.go:313] computeDefaultProviderPlugins(): skipping python, not a resource provider
+I0112 17:15:09.170208   45859 plugins.go:310] computeDefaultProviderPlugins(): considering vsphere-4.3.0
+I0112 17:15:09.170214   45859 plugins.go:341] computeDefaultProviderPlugins(): plugin vsphere-4.3.0 selected for package vsphere (first seen)
+I0112 17:15:09.170222   45859 plugins.go:347] computeDefaultProviderPlugins(): summary of default plugins:
+I0112 17:15:09.170226   45859 plugins.go:349]   vsphere         = 4.3.0
+I0112 17:15:09.170248   45859 plugins.go:1578] GetPluginPath(language, python, <nil>): found on $PATH /opt/homebrew/bin/pulumi-language-python
+I0112 17:15:09.170270   45859 plugin.go:183] Launching plugin 'python' from '/opt/homebrew/bin/pulumi-language-python' with args: -root=/Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure,127.0.0.1:50959
+I0112 17:15:09.181214   45859 eventsink.go:78] eventSink::Infoerr(<{%reset%}>I0112 17:15:09.181042   45901 main.go:123] language host identified executor from path: `/opt/homebrew/bin/pulumi-language-python-exec`
+<{%reset%}>)
+I0112 17:15:09.182576   45859 langruntime_plugin.go:228] langhost[python].GetPluginInfo() executing
+I0112 17:15:09.182920   45859 registry.go:127] provider(urn:pulumi:dev::infrastructure::pulumi:pulumi:Stack::infrastructure-dev): 
+I0112 17:15:09.183086   45859 deployment_executor.go:227] deploymentExecutor.Execute(...): waiting for incoming events
+I0112 17:15:09.183127   45859 langruntime_plugin.go:188] langhost[python].Run(pwd=/Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure,program=.,#args=0,proj=infrastructure,stack=dev,#config=0,dryrun=false) executing
+I0112 17:15:09.183135   45859 step_executor.go:389] StepExecutor worker(-2): worker coming online
+I0112 17:15:09.183181   45859 step_executor.go:389] StepExecutor worker(-2): worker waiting for incoming chains
+I0112 17:15:09.183442   45859 eventsink.go:78] eventSink::Infoerr(<{%reset%}>I0112 17:15:09.183417   45898 main.go:667] Language host launching process:  /opt/homebrew/bin/pulumi-language-python-exec /opt/homebrew/bin/pulumi-language-python-exec --monitor 127.0.0.1:50967 --engine 127.0.0.1:50959 --project infrastructure --stack dev --pwd /Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure --dry_run false --parallel 2147483647 .
+<{%reset%}>)
+I0112 17:15:09.320688   45859 eventsink.go:59] registering resource: ty=pulumi:pulumi:Stack, name=infrastructure-dev, custom=False, remote=False
+I0112 17:15:09.320711   45859 eventsink.go:62] eventSink::Debug(<{%reset%}>registering resource: ty=pulumi:pulumi:Stack, name=infrastructure-dev, custom=False, remote=False<{%reset%}>)
+I0112 17:15:09.475623   45859 eventsink.go:59] Waiting for outstanding RPCs to complete
+I0112 17:15:09.475647   45859 eventsink.go:62] eventSink::Debug(<{%reset%}>Waiting for outstanding RPCs to complete<{%reset%}>)
+I0112 17:15:09.475890   45859 eventsink.go:59] RPCs successfully completed
+I0112 17:15:09.475900   45859 eventsink.go:62] eventSink::Debug(<{%reset%}>RPCs successfully completed<{%reset%}>)
+I0112 17:15:09.476090   45859 eventsink.go:59] Waiting for 3 outstanding tasks to complete
+I0112 17:15:09.476098   45859 eventsink.go:62] eventSink::Debug(<{%reset%}>Waiting for 3 outstanding tasks to complete<{%reset%}>)
+I0112 17:15:09.476318   45859 eventsink.go:59] beginning rpc register resource
+I0112 17:15:09.476324   45859 eventsink.go:62] eventSink::Debug(<{%reset%}>beginning rpc register resource<{%reset%}>)
+I0112 17:15:09.476475   45859 eventsink.go:59] beginning rpc register resource outputs
+I0112 17:15:09.476486   45859 eventsink.go:62] eventSink::Debug(<{%reset%}>beginning rpc register resource outputs<{%reset%}>)
+I0112 17:15:09.476708   45859 eventsink.go:59] resource registration prepared: ty=pulumi:pulumi:Stack, name=infrastructure-dev
+I0112 17:15:09.476714   45859 eventsink.go:62] eventSink::Debug(<{%reset%}>resource registration prepared: ty=pulumi:pulumi:Stack, name=infrastructure-dev<{%reset%}>)
+I0112 17:15:09.479243   45859 source_eval.go:1180] ResourceMonitor.RegisterResource received: t=pulumi:pulumi:Stack, name=infrastructure-dev, custom=false, #props=0, parent=, protect=false, provider=, deps=[], deleteBeforeReplace=<nil>, ignoreChanges=[], aliases=[], customTimeouts={0 0 0}, providers=map[], replaceOnChanges=[], retainOnDelete=false, deletedWith=
+I0112 17:15:09.479266   45859 source_eval.go:170] EvalSourceIterator produced a registration: t=pulumi:pulumi:Stack,name=infrastructure-dev,#props=0
+I0112 17:15:09.479274   45859 deployment_executor.go:231] deploymentExecutor.Execute(...): incoming event (nil? false, <nil>)
+I0112 17:15:09.479279   45859 deployment_executor.go:418] deploymentExecutor.handleSingleEvent(...): received RegisterResourceEvent
+I0112 17:15:09.479308   45859 step_generator.go:809] Planner decided not to update 'urn:pulumi:dev::infrastructure::pulumi:pulumi:Stack::infrastructure-dev' after diff (same) (inputs=map[])
+I0112 17:15:09.479318   45859 step_generator.go:269] Checking step same for urn:pulumi:dev::infrastructure::pulumi:pulumi:Stack::infrastructure-dev
+I0112 17:15:09.479325   45859 step_executor.go:389] StepExecutor worker(-2): worker received chain for execution
+I0112 17:15:09.479330   45859 step_executor.go:389] StepExecutor worker(-2): worker waiting for incoming chains
+I0112 17:15:09.479340   45859 step_executor.go:389] StepExecutor worker(0): launching oneshot worker
+I0112 17:15:09.479738   45859 snapshot.go:131] SnapshotManager: Beginning mutation for step `same` on resource `urn:pulumi:dev::infrastructure::pulumi:pulumi:Stack::infrastructure-dev`
+I0112 17:15:09.479748   45859 step_executor.go:389] StepExecutor worker(0): applying step same on urn:pulumi:dev::infrastructure::pulumi:pulumi:Stack::infrastructure-dev (preview false)
+I0112 17:15:09.479772   45859 snapshot.go:279] SnapshotManager: sameSnapshotMutation.End(..., true)
+I0112 17:15:09.479786   45859 snapshot.go:531] Marked old state snapshot as done: urn:pulumi:dev::infrastructure::pulumi:pulumi:Stack::infrastructure-dev
+I0112 17:15:09.479791   45859 snapshot.go:540] Appended new state snapshot to be written: urn:pulumi:dev::infrastructure::pulumi:pulumi:Stack::infrastructure-dev
+I0112 17:15:09.479967   45859 snapshot.go:271] SnapshotManager: mustWrite() false
+I0112 17:15:09.479972   45859 snapshot.go:301] SnapshotManager: sameSnapshotMutation.End() eliding write
+I0112 17:15:09.479978   45859 step_executor.go:389] StepExecutor worker(0): step same on urn:pulumi:dev::infrastructure::pulumi:pulumi:Stack::infrastructure-dev retired
+I0112 17:15:09.479991   45859 source_eval.go:1323] ResourceMonitor.RegisterResource operation finished: t=pulumi:pulumi:Stack, urn=urn:pulumi:dev::infrastructure::pulumi:pulumi:Stack::infrastructure-dev, #outs=0
+I0112 17:15:09.480250   45859 eventsink.go:59] resource registration successful: ty=pulumi:pulumi:Stack, urn=urn:pulumi:dev::infrastructure::pulumi:pulumi:Stack::infrastructure-dev
+I0112 17:15:09.480258   45859 eventsink.go:62] eventSink::Debug(<{%reset%}>resource registration successful: ty=pulumi:pulumi:Stack, urn=urn:pulumi:dev::infrastructure::pulumi:pulumi:Stack::infrastructure-dev<{%reset%}>)
+I0112 17:15:09.480552   45859 eventsink.go:59] register resource outputs prepared: urn=urn:pulumi:dev::infrastructure::pulumi:pulumi:Stack::infrastructure-dev, props=
+I0112 17:15:09.480559   45859 eventsink.go:62] eventSink::Debug(<{%reset%}>register resource outputs prepared: urn=urn:pulumi:dev::infrastructure::pulumi:pulumi:Stack::infrastructure-dev, props=<{%reset%}>)
+I0112 17:15:09.480749   45859 source_eval.go:1379] ResourceMonitor.RegisterResourceOutputs received: urn=urn:pulumi:dev::infrastructure::pulumi:pulumi:Stack::infrastructure-dev, #outs=0
+I0112 17:15:09.480757   45859 source_eval.go:175] EvalSourceIterator produced a completion: urn=urn:pulumi:dev::infrastructure::pulumi:pulumi:Stack::infrastructure-dev,#outs=0
+I0112 17:15:09.480762   45859 deployment_executor.go:231] deploymentExecutor.Execute(...): incoming event (nil? false, <nil>)
+I0112 17:15:09.480766   45859 deployment_executor.go:424] deploymentExecutor.handleSingleEvent(...): received register resource outputs
+I0112 17:15:09.480770   45859 step_executor.go:389] StepExecutor worker(-1): registered resource outputs urn:pulumi:dev::infrastructure::pulumi:pulumi:Stack::infrastructure-dev: old=#0, new=#0
+I0112 17:15:09.481687   45859 state.go:304] error copying .pulumi/stacks/dev.json.gz to .pulumi/stacks/dev.json.gz.bak: blob (key ".pulumi/stacks/dev.json.gz -> .pulumi/stacks/dev.json.gz.bak") (code=NotFound): stat /Users/nsalman/.pulumi/stacks/dev.json.gz: no such file or directory
+I0112 17:15:09.481708   45859 state.go:310] error deleting source object after rename: .pulumi/stacks/dev.json.gz (blob (key ".pulumi/stacks/dev.json.gz") (code=NotFound): remove /Users/nsalman/.pulumi/stacks/dev.json.gz: no such file or directory) skipping
+I0112 17:15:09.484019   45859 state.go:261] Saved stack dev checkpoint to: .pulumi/stacks/dev.json (backup=.pulumi/stacks/dev.json.bak)
+I0112 17:15:09.484033   45859 source_eval.go:1403] ResourceMonitor.RegisterResourceOutputs operation finished: urn=urn:pulumi:dev::infrastructure::pulumi:pulumi:Stack::infrastructure-dev, #outs=0
+I0112 17:15:09.484374   45859 eventsink.go:59] resource registration successful: urn=urn:pulumi:dev::infrastructure::pulumi:pulumi:Stack::infrastructure-dev, props=
+I0112 17:15:09.484382   45859 eventsink.go:62] eventSink::Debug(<{%reset%}>resource registration successful: urn=urn:pulumi:dev::infrastructure::pulumi:pulumi:Stack::infrastructure-dev, props=<{%reset%}>)
+I0112 17:15:09.484809   45859 eventsink.go:59] All outstanding tasks completed.
+I0112 17:15:09.484816   45859 eventsink.go:62] eventSink::Debug(<{%reset%}>All outstanding tasks completed.<{%reset%}>)
+I0112 17:15:09.485016   45859 eventsink.go:59] waiting for quiescence; 2 RPCs outstanding
+I0112 17:15:09.485023   45859 eventsink.go:62] eventSink::Debug(<{%reset%}>waiting for quiescence; 2 RPCs outstanding<{%reset%}>)
+I0112 17:15:09.485219   45859 eventsink.go:59] waiting for quiescence; 1 RPCs outstanding
+I0112 17:15:09.485225   45859 eventsink.go:62] eventSink::Debug(<{%reset%}>waiting for quiescence; 1 RPCs outstanding<{%reset%}>)
+I0112 17:15:09.485451   45859 eventsink.go:59] RPCs successfully completed
+I0112 17:15:09.485456   45859 eventsink.go:62] eventSink::Debug(<{%reset%}>RPCs successfully completed<{%reset%}>)
+I0112 17:15:09.485649   45859 eventsink.go:59] No outstanding tasks to complete
+I0112 17:15:09.485654   45859 eventsink.go:62] eventSink::Debug(<{%reset%}>No outstanding tasks to complete<{%reset%}>)
+I0112 17:15:09.485833   45859 eventsink.go:59] run_pulumi_func completed
+I0112 17:15:09.485839   45859 eventsink.go:62] eventSink::Debug(<{%reset%}>run_pulumi_func completed<{%reset%}>)
+I0112 17:15:09.521512   45859 langruntime_plugin.go:221] langhost[python].RunPlan(pwd=/Users/nsalman/dev-me/pulumi/pulumi-vsphere-demo/infrastructure,program=.,...,dryrun=false) success: progerr=
+I0112 17:15:09.522234   45859 deployment_executor.go:231] deploymentExecutor.Execute(...): incoming event (nil? true, <nil>)
+I0112 17:15:09.522260   45859 deployment_executor.go:361] performDeletes(...): beginning
+I0112 17:15:09.522279   45859 step_generator.go:1318] Planner trusts dependency graph, scheduling deletions in parallel
+I0112 17:15:09.522287   45859 step_executor.go:389] StepExecutor worker(-1): StepExecutor.waitForCompletion(): waiting for worker threads to exit
+I0112 17:15:09.522292   45859 step_executor.go:389] StepExecutor worker(-2): worker received nil chain, exiting
+I0112 17:15:09.522300   45859 step_executor.go:389] StepExecutor worker(-1): StepExecutor.waitForCompletion(): worker threads all exited
+I0112 17:15:09.522306   45859 deployment_executor.go:275] deploymentExecutor.Execute(...): step executor has completed
+I0112 17:15:09.522342   45859 deployment_executor.go:138] deploymentExecutor.Execute(...): exiting provider canceller
+I0112 17:15:09.522342   45859 ignore.go:44] Explicitly ignoring and discarding error: rpc error: code = Canceled desc = grpc: the client connection is closing
+I0112 17:15:09.522364   45859 host.go:530] Error closing 'python' language plugin during shutdown; ignoring: 1 error occurred:
+	* operation not permitted
+
+I0112 17:15:09.523092   45859 update.go:196] *** Update(preview=false) complete ***
+I0112 17:15:09.558791   45859 sink.go:161] defaultSink::Warning([38;5;3mwarning: [0m[0mA new version of Pulumi is available. To upgrade from version '3.51.0' to '3.51.1', run 
+   $ brew upgrade pulumi
+or visit https://pulumi.com/docs/reference/install/ for manual instructions and release notes.[0m)
+[38;5;3mwarning: [0m[0mA new version of Pulumi is available. To upgrade from version '3.51.0' to '3.51.1', run 
+   $ brew upgrade pulumi
+or visit https://pulumi.com/docs/reference/install/ for manual instructions and release notes.[0m
+cance
