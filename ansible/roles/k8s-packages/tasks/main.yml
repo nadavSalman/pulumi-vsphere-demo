@@ -1,0 +1,21 @@
+---
+# tasks file for k8s-packages
+- name: Kubeadm | kubectl | kubelet install
+  shell: |
+    sudo apt-get update
+    sudo apt-get install -y apt-transport-https ca-certificates curl
+    sudo curl -fsSLo /etc/apt/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg
+    echo "deb [signed-by=/etc/apt/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+    sudo apt-get -y install vim git curl wget kubelet=1.26.0-00 kubeadm=1.26.0-00 kubectl=1.26.0-00
+    sudo apt-mark hold kubelet kubeadm kubectl
+
+- name: Forwarding IPv4 and letting iptables see bridged traffic
+  shell: |
+    sudo modprobe overlay
+    sudo modprobe br_netfilter
+    sudo tee /etc/sysctl.d/kubernetes.conf<<EOF
+    net.bridge.bridge-nf-call-ip6tables = 1
+    net.bridge.bridge-nf-call-iptables = 1
+    net.ipv4.ip_forward = 1
+    EOF
+    sysctl --system

@@ -1,0 +1,14 @@
+---
+- name: Preper K8s Infrastructure 
+  become: true 
+  hosts: all
+  roles:
+     - disable-firewall-ubuntu-22.04
+     - k8s-packages
+     - setup-containerd
+
+# - name: Creating a cluster with kubeadm
+#   roles:
+#     - 
+    
+

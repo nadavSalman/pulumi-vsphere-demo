@@ -2,22 +2,34 @@ all:
   hosts:
     "{{ lookup('env', 'HOST_IP_1') }}":
       ansible_connection: ssh
+      ansible_sudo_pass: "{{ lookup('env', 'ANSIBLE_PASSWORD') }}"
       ansible_user: "{{ lookup('env', 'ANSIBLE_USER') }}"
-      ansible_password: "{{ lookup('env', 'ANSIBLE_PASSWORD') }}"
       ansible_ssh_private_key_file: "/Users/nsalman/dev-me/vsphere-ubuntu-keys/id_rsa"
-      ansible_sudo_pass: Q1w2e3r4t5y6
-      
+      group: master
 
     "{{ lookup('env', 'HOST_IP_2') }}":
       ansible_connection: ssh
+      ansible_sudo_pass: "{{ lookup('env', 'ANSIBLE_PASSWORD') }}"
       ansible_user: "{{ lookup('env', 'ANSIBLE_USER') }}"
-      ansible_password: "{{ lookup('env', 'ANSIBLE_PASSWORD') }}"
       ansible_ssh_private_key_file: "/Users/nsalman/dev-me/vsphere-ubuntu-keys/id_rsa"
-      ansible_sudo_pass: Q1w2e3r4t5y6
+      group: workers
 
     "{{ lookup('env', 'HOST_IP_3') }}":
       ansible_connection: ssh
+      ansible_sudo_pass: "{{ lookup('env', 'ANSIBLE_PASSWORD') }}"
       ansible_user: "{{ lookup('env', 'ANSIBLE_USER') }}"
-      ansible_password: "{{ lookup('env', 'ANSIBLE_PASSWORD') }}"
       ansible_ssh_private_key_file: "/Users/nsalman/dev-me/vsphere-ubuntu-keys/id_rsa"
-      ansible_sudo_pass: Q1w2e3r4t5y6
+      group: workers
+
+master:
+  children:
+    - all
+  hosts:
+    "{{ lookup('env', 'HOST_IP_1') }}":
+
+workers:
+  children:
+    - all
+  hosts:
+    "{{ lookup('env', 'HOST_IP_2') }}":
+    "{{ lookup('env', 'HOST_IP_3') }}":

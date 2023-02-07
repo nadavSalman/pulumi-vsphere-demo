@@ -4,7 +4,9 @@ import pulumi
 
 import os
 import pulumi_vsphere as vsphere
-from pulumi_vsphere import VirtualMachineNetworkInterfaceArgs , VirtualMachineDiskArgs, VirtualMachineCloneArgs, Folder, VirtualMachineCloneCustomizeArgs, VirtualMachineCloneCustomizeLinuxOptionsArgs, VirtualMachineCloneCustomizeNetworkInterfaceArgs
+from pulumi_vsphere import  VirtualMachineNetworkInterfaceArgs , VirtualMachineDiskArgs, VirtualMachineCloneArgs, Folder, VirtualMachineCloneCustomizeArgs, VirtualMachineCloneCustomizeLinuxOptionsArgs, VirtualMachineCloneCustomizeNetworkInterfaceArgs
+from pulumi import ResourceOptions
+
 
 def main():
 
@@ -47,6 +49,7 @@ def main():
     for ip_index in range(0,len(nodes_ipv4_address)):
         virtual_machinens.append(
             vsphere.VirtualMachine(resource_name= "node-00" + str(ip_index + 1),
+                    opts=ResourceOptions(depends_on=[test_folder]),
                     name="node-00" + str(ip_index + 1),
                     folder="/pulumi-resources",
                     datastore_id=datastores[1].id,
@@ -79,8 +82,8 @@ def main():
                             )]
 
                         )
-                    )    
                     )
+                )
         )
                     
     # pulumi.export('dir vm',dir(virtual_machine.default_ip_address.all))

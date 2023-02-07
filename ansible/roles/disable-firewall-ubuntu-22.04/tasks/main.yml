@@ -1,0 +1,29 @@
+---
+# tasks file for disable-firewall-ubuntu-22.04
+- name: Disable firewall on Ubuntu 22.04
+  become_user: root
+  shell: ufw disable
+  args:
+    executable: /bin/bash
+  register: firewall_disable_result
+
+- name: Display firewall disable result
+  debug:
+    var: firewall_disable_result
+
+- name:  swap disabled
+  shell: |
+    sudo swapoff -a
+
+- name:  permanently disabled swap 
+  shell: |
+    # Check the name of the swap partition
+    SWAP_PARTITION=$(swapon --show | awk '/partition/ {print $1}')
+
+    # Turn off the swap partition
+    swapoff $SWAP_PARTITION
+
+    # Comment out the line in /etc/fstab that corresponds to the swap partition
+    sed -i '/'$SWAP_PARTITION'/ s/^/#/' /etc/fstab
+
+    echo "Swap has been permanently disabled"

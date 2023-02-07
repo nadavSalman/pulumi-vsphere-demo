@@ -1,6 +1,0 @@
----
-- name: Run Infrastructure Tests 
-  become: true 
-  hosts: all
-  roles:
-     - infra-preparation

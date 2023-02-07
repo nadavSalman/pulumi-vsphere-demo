@@ -1,0 +1,14 @@
+---
+# tasks file for initializing-control-plane-nodes
+- nmae : Initializing control-plane nodes
+  sell: |
+    sudo kubeadm init \
+    --pod-network-cidr=10.244.0.0/16 \
+    --upload-certs \
+    --kubernetes-version=v1.26.0 \
+    --control-plane-endpoint=192.168.103.198 \
+    --cri-socket unix:///run/containerd/containerd.sock \
+    --v=5
+
+
+
